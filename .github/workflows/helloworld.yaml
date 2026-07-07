@@ -1,0 +1,12 @@
+name: Hello World Workflow
+
+# Triggers manually using the "Run workflow" button in the GitHub UI
+on: [push]
+
+jobs:
+  # Job name
+  say-hello:
+    runs-on: ubuntu-latest # github hosted runners
+    steps:
+      - name: Print Hello Message
+        run: echo "Hello, World!"
