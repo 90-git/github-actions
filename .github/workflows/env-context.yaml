@@ -1,7 +1,7 @@
 name: Environment context demo
 
 # Triggers manually using the "Run workflow" button in the GitHub UI
-on: [push]
+on: workflow_dispatch
 
 env: 
    project: "roboshop"
