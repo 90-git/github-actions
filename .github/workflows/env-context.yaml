@@ -11,6 +11,9 @@ jobs:
   # Job name
    github-context:
     runs-on: ubuntu-latest # github hosted runners
+    outputs:
+      image-name: ${{ steps.tag.outputs.image-name }}
+      image-version: ${{ steps.tag.outputs.version }}
     steps:
       - name: Print info
         run: | 
