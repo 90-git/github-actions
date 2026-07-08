@@ -70,4 +70,4 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - name: sonar scan 
-        run: echo "sonar-scan runs"
+        run: echo "sonar-scan runs and use quality gates"
