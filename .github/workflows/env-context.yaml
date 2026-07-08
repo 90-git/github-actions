@@ -71,3 +71,7 @@ jobs:
      steps:
       - name: sonar scan 
         run: echo "sonar-scan runs and use quality gates"
+
+      - name: Status of Job
+        run: 
+          echo "${{ toJson(job) }}"  
