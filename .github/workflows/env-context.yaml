@@ -33,13 +33,12 @@ jobs:
            echo "DB URL: ${{ vars.DB_URL}}"     
 
       - name: image tag
-        id: tag # id is manadatory to access the output of this step in later step
+        id: tag # id is mandatory to access the output of this step in later steps
         run: |
-          
-           echo "version=1.0.0"  >> $GITHUB_OUTPUT
-           echo "image-name=catalogue" >> $GITHUB_OUTPUT
+          echo "version=1.0.0" >> $GITHUB_OUTPUT
+          echo "image-name=catalogue" >> $GITHUB_OUTPUT
 
       - name: print previous step output
         run: |
-              echo "Image name: ${{ steps.tag.outputs.image-name }}"  
-              echo "version name: ${{ steps.tag.outputs.version }}"     
+          echo "Image name: ${{ steps.tag.outputs.image-name }}"
+          echo "Version: ${{ steps.tag.outputs.version }}"   
