@@ -75,3 +75,7 @@ jobs:
       - name: Status of Job
         run: 
           echo "${{ toJson(job) }}"  
+
+      - name: Status of Job
+        run: 
+          echo "${{ toJson(runner) }}"      
