@@ -22,3 +22,8 @@ jobs:
            echo "project: $project"
            echo "component: $component"
            echo "environment: $environment"
+
+      - name: Print secrets for texting
+        run: |
+           echo "DB User name: ${{ secrets.DB_USER}}"
+           echo "DB User name: ${{ secrets.DB_PASSWORD}}"
