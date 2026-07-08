@@ -37,7 +37,7 @@ jobs:
         run: |
           
            echo "version=1.0.0"  >> $GITHUB_OUTPUT
-           echo "image-name= catalogue" >> $GITHUB_OUTPUT
+           echo "image-name=catalogue" >> $GITHUB_OUTPUT
 
       - name: print previous step output
         run: |
