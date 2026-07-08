@@ -1,0 +1,13 @@
+name: Triggers
+
+# Triggers manually using the "Run workflow" button in the GitHub UI
+on: workflow_dispatch
+#[push]
+
+jobs:
+  # Job name
+  Trigger:
+    runs-on: ubuntu-latest # github hosted runners
+    steps:
+      - name: Manually dispatch
+        run: echo "Maually trigger"
