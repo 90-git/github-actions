@@ -1,0 +1,24 @@
+name: Environment context demo
+
+# Triggers manually using the "Run workflow" button in the GitHub UI
+on: [push]
+
+env: 
+   project: "roboshop"
+   component: "catalogue"
+   environment: "dev"
+jobs:
+  # Job name
+   github-context:
+    runs-on: ubuntu-latest # github hosted runners
+    steps:
+      - name: Print info
+        run: | 
+          echo "${{ toJson(github) }}"
+          echo "branch name: ${{ github.ref_name }}"
+       
+      - name: access env variables
+        run: |
+           echo "project: $project"
+           echo "component: $component"
+           echo "environment: $environment"
