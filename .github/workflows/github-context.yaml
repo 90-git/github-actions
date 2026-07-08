@@ -1,0 +1,12 @@
+name: Github context demo
+
+# Triggers manually using the "Run workflow" button in the GitHub UI
+on: [push]
+
+jobs:
+  # Job name
+   github-context:
+    runs-on: ubuntu-latest # github hosted runners
+    steps:
+      - name: Print info
+        run: echo "${{ toJson(github) }}"
