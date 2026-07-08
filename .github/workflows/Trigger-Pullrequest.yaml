@@ -1,0 +1,16 @@
+name: Triggers
+on: 
+  # if someone opens PR to main branch
+  pull_request:
+      types: [opened, reopened]
+      branches:
+        - 'releases/**'
+        
+  
+jobs:
+  # Job name
+  Trigger:
+    runs-on: ubuntu-latest # github hosted runners
+    steps:
+      - name: Pull request 
+        run: echo "Pull request to Main branch"
